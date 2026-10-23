@@ -13,9 +13,9 @@ def log_decorator(func: Callable[..., Any]) -> Callable[..., Any]:
     return wrapper
 
 
-@log_decorator
-def hello() -> None:
-    print("Hello, world!")
+if __name__ == "__main__":
+    @log_decorator
+    def hello() -> None:
+        print("Hello, world!")
 
-
-hello()
+    hello()
